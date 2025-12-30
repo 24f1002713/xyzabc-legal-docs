@@ -1,116 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Child Safety Standards - Zync</title>
     <style>
-        :root {
-            --bg: #0f0f1a;
-            --card: #1a1a2e;
-            --purple: #7c3aed;
-            --text: #e2e8f0;
-            --muted: #94a3b8;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            padding: 40px 20px;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, sans-serif;
+        line-height: 1.7;
+        color: #e0e0e0;
+        background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(27, 38, 59, 0.8);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        margin: 0 auto 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(108, 99, 255, 0.3);
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #6c63ff, #4ecdc4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 10px;
+      }
+
+      .last-updated {
+        color: #888;
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        color: #4ecdc4;
+        font-size: 1.4rem;
+        margin: 35px 0 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgba(78, 205, 196, 0.3);
+      }
+
+      h3 {
+        color: #6c63ff;
+        font-size: 1.1rem;
+        margin: 20px 0 10px;
+      }
+
+      p {
+        margin-bottom: 15px;
+        color: #b0b0b0;
+      }
+
+      ul {
+        margin: 15px 0 15px 25px;
+        color: #b0b0b0;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .highlight-box {
+        background: rgba(108, 99, 255, 0.1);
+        border-left: 4px solid #6c63ff;
+        padding: 15px 20px;
+        border-radius: 0 10px 10px 0;
+        margin: 20px 0;
+      }
+
+      .important-box {
+        background: rgba(255, 107, 107, 0.1);
+        border-left: 4px solid #ff6b6b;
+        padding: 15px 20px;
+        border-radius: 0 10px 10px 0;
+        margin: 20px 0;
+      }
+
+      a {
+        color: #4ecdc4;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
         .container {
-            max-width: 700px;
-            margin: 0 auto;
+          padding: 25px;
         }
         h1 {
-            color: var(--purple);
-            font-size: 2rem;
-            margin-bottom: 8px;
+          font-size: 1.8rem;
         }
-        .subtitle {
-            color: var(--muted);
-            margin-bottom: 32px;
-        }
-        h2 {
-            color: var(--text);
-            font-size: 1.25rem;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #333;
-        }
-        p, li {
-            color: var(--muted);
-            margin-bottom: 12px;
-        }
-        ul {
-            padding-left: 24px;
-        }
-        .highlight {
-            background: var(--card);
-            border-left: 4px solid var(--purple);
-            padding: 16px 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        .highlight strong {
-            color: var(--text);
-        }
-        a {
-            color: var(--purple);
-        }
-        .footer {
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid #333;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>🛡️ Child Safety Standards</h1>
-        <p class="subtitle">Zync - Discover People Nearby</p>
-
-        <div class="highlight">
-            <strong>Zero Tolerance Policy:</strong> We strictly prohibit any content that depicts, promotes, or facilitates child sexual abuse or exploitation (CSAE).
+      <div class="header">
+        <div class="logo">
+          <img src="../zync_icon.png" alt="Zync Logo" />
         </div>
+        <h1>Child Safety Standards</h1>
+        <p class="last-updated">Last Updated: December 30, 2024</p>
+      </div>
 
-        <h2>1. Prohibited Content</h2>
-        <ul>
-            <li>Any visual depiction of a minor engaged in sexual acts</li>
-            <li>Solicitation of minors for sexual activity</li>
-            <li>Distribution of Child Sexual Abuse Material (CSAM)</li>
-        </ul>
-        <p>Violators will be <strong>permanently banned</strong> and reported to authorities including NCMEC.</p>
+      <div class="important-box">
+        <strong>🛡️ Zero Tolerance Policy:</strong> Zync strictly prohibits any
+        content that depicts, promotes, or facilitates child sexual abuse or
+        exploitation (CSAE). Violators are permanently banned and reported to
+        authorities.
+      </div>
 
-        <h2>2. In-App Reporting</h2>
-        <p>Users can report suspicious behavior directly in the app:</p>
-        <ul>
-            <li>Open the user's profile card</li>
-            <li>Tap <strong>"Report User"</strong> at the bottom</li>
-            <li>Select the violation type and submit</li>
-        </ul>
-        <p>Reports are reviewed by our safety team within 24 hours.</p>
+      <h2>1. Prohibited Content</h2>
+      <p>
+        We have zero tolerance for content or behavior that endangers minors,
+        including:
+      </p>
+      <ul>
+        <li>Any visual depiction of a minor in sexual acts or explicit manner</li>
+        <li>Solicitation of minors for sexual activity</li>
+        <li>Distribution of Child Sexual Abuse Material (CSAM)</li>
+        <li>Grooming or predatory behavior targeting minors</li>
+      </ul>
 
-        <h2>3. Enforcement</h2>
-        <ul>
-            <li>Automated detection + manual review</li>
-            <li>Evidence preserved for law enforcement</li>
-            <li>Full cooperation with authorities</li>
-        </ul>
+      <h2>2. In-App Reporting</h2>
+      <p>
+        Users can report suspicious behavior or inappropriate content directly
+        within the Zync app:
+      </p>
+      <ul>
+        <li>Open the user's profile card</li>
+        <li>Scroll down and tap <strong>"Report User"</strong></li>
+        <li>Select the violation type and provide details</li>
+        <li>Submit the report</li>
+      </ul>
 
-        <h2>4. Contact</h2>
-        <p>For child safety concerns, email us directly:<br>
-        <a href="mailto:xyzabc.developer@gmail.com">xyzabc.developer@gmail.com</a></p>
+      <div class="highlight-box">
+        <strong>Response Time:</strong> All child safety reports are prioritized
+        and reviewed by our safety team within 24 hours.
+      </div>
 
-        <div class="footer">
-            <p>Effective Date: January 1, 2025<br>
-            © 2025 XYZ ABC Technologies</p>
-        </div>
+      <h2>3. Enforcement & Action</h2>
+      <p>Upon confirmation of a violation:</p>
+      <ul>
+        <li>The account is <strong>permanently banned</strong> immediately</li>
+        <li>Evidence is preserved for law enforcement</li>
+        <li>
+          Report is filed with
+          <strong>NCMEC (National Center for Missing & Exploited Children)</strong>
+        </li>
+        <li>Full cooperation with regional and national authorities</li>
+      </ul>
+
+      <h2>4. Cooperation with Authorities</h2>
+      <p>
+        We comply with all applicable laws and regulations regarding the safety
+        of minors. We actively cooperate with law enforcement agencies in
+        investigations involving the exploitation of minors on our platform.
+      </p>
+
+      <h2>5. Contact Us</h2>
+      <p>
+        For child safety concerns or to report violations directly, please
+        contact us:
+      </p>
+      <div class="highlight-box">
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:xyzabc.developer@gmail.com">xyzabc.developer@gmail.com</a>
+        </p>
+        <p><strong>Developer:</strong> XYZABC Technologies</p>
+        <p style="margin-bottom: 0"><strong>Location:</strong> India</p>
+      </div>
+
+      <div class="footer">
+        <p>© 2025 Zync by XYZABC Technologies. All rights reserved.</p>
+        <p style="margin-top: 10px">
+          <a href="../terms-of-service.html">Terms of Service</a> ·
+          <a href="../privacy-policy.html">Privacy Policy</a>
+        </p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
