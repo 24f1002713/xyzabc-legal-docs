@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/xyzabc-legal-docs/:path*",
+      "destination": "/:path*"
+    }
+  ]
+}
